@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+
 import Container from './ui/Container';
 const routes = [
   {
@@ -31,9 +33,9 @@ export default function Navbar() {
           {/* left side */}
           <div className='flex justify-between w-full max-w-[590px]'>
             {/* logo */}
-            <div className=''>
-              <img src='/logo.svg' alt='' />
-            </div>
+            <Link href='#' className=''>
+              <Image width={138} height={20} src='/logo.svg' alt='' />
+            </Link>
             {/* nav links */}
             <ul className='hidden md:flex'>
               {routes.map((route) => (
@@ -49,12 +51,24 @@ export default function Navbar() {
           {/* right side */}
           <div className='flex items-center justify-between w-full max-w-[120px]'>
             {/* cart */}
-            <div className=''>
-              <img src='/icon-cart.svg' alt='' className='w-full h-full' />
+            <div className='cursor-pointer'>
+              <Image
+                width={22}
+                height={20}
+                src='/icon-cart.svg'
+                alt=''
+                className='w-full h-full'
+              />
             </div>
             {/* profile */}
-            <div className='w-12'>
-              <img src='image-avatar.png' alt='' className='w-full h-full' />
+            <div className='cursor-pointer w-12'>
+              <Image
+                width={48}
+                height={48}
+                src='/image-avatar.png'
+                alt=''
+                className='w-full h-full'
+              />
             </div>
           </div>
         </nav>
