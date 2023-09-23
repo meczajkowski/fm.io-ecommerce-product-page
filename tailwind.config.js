@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       colors: {
         primary: 'hsl(26, 100%, 55%)',
+        'primary-muted': 'hsl(25, 100%, 94%)',
+
+        muted: ' hsl(220, 14%, 75%)',
       },
     },
   },
