@@ -31,16 +31,19 @@ export default function Navbar() {
       <header>
         <nav className='h-28 flex justify-between items-center border-b'>
           {/* left side */}
-          <div className='flex justify-between w-full max-w-[590px]'>
+          <div className='flex justify-between items-center w-full max-w-[610px] h-full'>
             {/* logo */}
             <Link href='#' className=''>
               <Image width={138} height={20} src='/logo.svg' alt='' />
             </Link>
             {/* nav links */}
-            <ul className='hidden md:flex'>
+            <ul className='hidden md:flex h-full'>
               {routes.map((route) => (
-                <li className='mx-3'>
-                  <Link href={route.href} className=''>
+                <li className='mx-4'>
+                  <Link
+                    href={route.href}
+                    className=' h-full flex items-center border-b-4 border-transparent transition-all hover:font-bold hover:border-primary'
+                  >
                     {route.label}
                   </Link>
                 </li>
